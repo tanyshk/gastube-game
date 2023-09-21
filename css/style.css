@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(../img/fon_new.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    /* width: 100%; */
+    /* height: 100%; */
+    /* background-color: rgb(193, 226, 203); */
+}
+
+.page {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    user-select: none;
+}
+
+#loader-line {
+    --width: 0%;
+    background-color: #3cc0cc;
+    border: none;
+    height: 0.8em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: var(--width);
+    border-radius: 1vmin;
+}
+
+.container {
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#game-board {
+    --cell-size: 12vmin;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(7, var(--cell-size));
+    grid-template-rows: repeat(7, var(--cell-size));
+    gap: 0vmin;
+    border-radius: 1vmin;
+}
+
+#left {
+    
+}
+
+#right {
+    
+}
+
+.cell {
+    margin: 0;
+    padding: 0; 
+}
+
+.tile {
+    --y: 0;
+    --x: 0;
+    --degree: 0deg;
+    position: absolute;
+    top: calc(var(--y) * var(--cell-size));
+    left: calc(var(--x) * var(--cell-size));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--cell-size);
+    height: var(--cell-size);
+    /* border: 1px yellow; */
+    transition: 200ms;
+    /* transform: rotate(calc(var(--degree) * 1deg)); */
+    transform-origin: var(--x) var(--y);
+    transform: rotate(var(--degree));
+    /* animation: show 200ms; */
+    cursor: pointer;
+    background-size: cover;
+    background-position: center center;
+}
+
+button {
+    color: #fff;
+    background-color: #24788b;
+    border: none;
+    border-radius: 1vmin;
+    cursor: pointer;
+    padding: 0.5em 1.5em;
+    margin: 1em;
+    display: inline-block;
+    font-size: 1.5rem;
+    
+}
+button:hover {
+    background-color: #175d6c;
+}
+
+.game {
+    /* background-color: rgba(68, 68, 68, 0.5); */
+    /* border: 0.5rem solid green; */
+    pointer-events: auto;
+}
+
+.win {
+    /* background-color: green; */
+    /* background-color: rgba(68, 68, 68, 0.5); */
+    /* border: 0.5rem solid green; */
+    pointer-events: none;
+}
+
+.loss {
+    /* background-color: red; */
+    /* background-color: rgba(68, 68, 68, 0.5); */
+    /* border: 0.5rem solid red; */
+    pointer-events: none;
+}
+
+.message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 150px;
+    margin: -75px 0 0 -200px;
+    background: #f4efd7;
+    border: 1px solid;
+    font-size: 2em;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1vmin;
+    padding: 0.5em 1.5em;
+    display: none;
+    opacity: 0;
+}
+
+#win-message {
+    border-color: green;
+    color: green;
+}
+
+#loss-message {
+    border-color: red;
+    color: red;
+}
+
+.visible {
+    display: flex !important;
+    opacity: 1 !important;
+}
+
+
