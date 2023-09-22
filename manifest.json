@@ -1,0 +1,49 @@
+{
+  "background_color": "#c1e2cb",
+  "description": "Gas pipes game",
+  "dir": "ltr",
+  "display": "fullscreen",
+  "name": "Газовые трубы",
+  "orientation": "landscape",
+  "scope": "/",
+  "short_name": "gastube-game",
+  "start_url": "https://tanyshk.github.io/gastube-game/",
+  "theme_color": "#ffffff",
+  "categories": [
+    "games"
+  ],
+  "screenshots": [
+    {
+      "src": "img/Screenshot.jpeg",
+      "sizes": "1280x720",
+      "type": "image/jpg",
+      "platform": "wide"
+    }
+  ],
+  "icons": [
+    {
+      "src": "ico/48-48.png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "ico/72-72.png",
+      "sizes": "72x72"
+    },
+    {
+      "src": "ico/192-192.png",
+      "sizes": "192x192"
+    },  
+    {
+      "src": "ico/512-512.png",
+      "sizes": "512x512"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "main",
+      "url": "/index.html",
+      "description": "main page"
+    }
+  ],
+  "lang": "ru"
+}
